@@ -60,7 +60,7 @@ final class Car: UIView {
     // MARK: Setup
     private func setUp() {
         setUpCar()
-        setUpViews()
+        setUpCarViews()
         setUpWheels()
         animateCar()
         animateWheels()
@@ -71,13 +71,13 @@ final class Car: UIView {
         self.widthAnchor.constraint(equalToConstant: width).isActive = true
         self.heightAnchor.constraint(equalToConstant: height).isActive = true
         if type == .rightLeft {
-            Coordinates.Car.barIndent.reverse()
-            Coordinates.Car.barHeights.reverse()
+            CarCoordinates.barIndent.reverse()
+            CarCoordinates.barHeights.reverse()
         }
     }
     
-    private func setUpViews() {
-        for i in 0..<Coordinates.Car.barCount {
+    private func setUpCarViews() {
+        for i in 0..<CarCoordinates.barCount {
             let view = UIView()
             view.translatesAutoresizingMaskIntoConstraints = false
             view.backgroundColor = Constant.Color.blue
@@ -87,10 +87,10 @@ final class Car: UIView {
             view.layer.shadowOffset = Constant.Shadow.offset
             view.layer.shadowColor = Constant.Color.blue.cgColor
             self.addSubview(view)
-            view.pinLeft(to: self, Double(i) * (Coordinates.Car.barWidth + Coordinates.Car.barSpacing))
-            view.pinTop(to: self, Coordinates.Car.barIndent[i])
-            view.setHeight(Coordinates.Car.barHeights[i])
-            view.setWidth(Coordinates.Car.barWidth)
+            view.pinLeft(to: self, Double(i) * (CarCoordinates.barWidth + CarCoordinates.barSpacing))
+            view.pinTop(to: self, CarCoordinates.barIndent[i])
+            view.setHeight(CarCoordinates.barHeights[i])
+            view.setWidth(CarCoordinates.barWidth)
             views.append(view)
         }
     }
@@ -99,16 +99,16 @@ final class Car: UIView {
         var wheelViews = [Int]()
         switch type {
         case .leftRight:
-            wheelViews = Coordinates.Wheel.leftRightPositions
+            wheelViews = WheelCoordinates.leftRightPositions
         case .rightLeft:
-            wheelViews = Coordinates.Wheel.rightLeftPositions
+            wheelViews = WheelCoordinates.rightLeftPositions
         }
         
         for i in wheelViews {
-            let wheel = CustomWheel(height: Coordinates.Wheel.wheelHeight, width: Coordinates.Wheel.wheelWidth)
+            let wheel = CustomWheel(height: WheelCoordinates.wheelHeight, width: WheelCoordinates.wheelWidth)
             self.addSubview(wheel)
-            wheel.pinTop(to: views[i].bottomAnchor, Coordinates.Wheel.wheelTopIndent)
-            wheel.pinLeft(to: views[i], Coordinates.Wheel.wheelLeadingIndent)
+            wheel.pinTop(to: views[i].bottomAnchor, WheelCoordinates.wheelTopIndent)
+            wheel.pinLeft(to: views[i], WheelCoordinates.wheelLeadingIndent)
             wheels.append(wheel)
         }
     }
