@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		D05FED1B2CCD8E6300ED339D /* BounceCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = BounceCar.app; path = "/Users/peter/Documents/Swift/iOS-HSE-MSK/HomeWork2/build/Debug-iphoneos/BounceCar.app"; sourceTree = "<absolute>"; };
+		D03258B82CCE6A4F00FAE169 /* BounceCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BounceCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -46,6 +46,7 @@
 			isa = PBXGroup;
 			children = (
 				D02694D42CB93E3800BBAF8A /* BounceCar */,
+				D03258B82CCE6A4F00FAE169 /* BounceCar.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,7 +72,7 @@
 			packageProductDependencies = (
 			);
 			productName = HomeWork2;
-			productReference = D05FED1B2CCD8E6300ED339D /* BounceCar.app */;
+			productReference = D03258B82CCE6A4F00FAE169 /* BounceCar.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
