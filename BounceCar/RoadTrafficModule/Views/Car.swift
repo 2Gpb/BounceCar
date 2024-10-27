@@ -36,12 +36,14 @@ final class Car: UIView {
         }
     }
     
+    //MARK: - Variables
+    private var views: [UIView] = []
+    private var wheels: [UIView] = []
+    
     // MARK: - Properties
     private let width: Double
     private let height: Double
     private let type: MoveType
-    private var views: [UIView] = []
-    private var wheels: [UIView] = []
     
     // MARK: - Lifecycle
     init(width: Double, height: Double, type: MoveType) {

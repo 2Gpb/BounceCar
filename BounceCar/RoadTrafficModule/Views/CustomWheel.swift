@@ -29,7 +29,7 @@ final class CustomWheel: UIView {
         self.height = height
         self.width = width
         super.init(frame: .zero)
-        setup()
+        setUp()
     }
     
     @available(*, unavailable)
@@ -38,12 +38,12 @@ final class CustomWheel: UIView {
     }
     
     // MARK: - Setup
-    private func setup() {
-        setupWheel()
-        setupWheelDisk()
+    private func setUp() {
+        setUpWheel()
+        setUpWheelDisk()
     }
     
-    private func setupWheel() {
+    private func setUpWheel() {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.backgroundColor = Constant.Wheel.color
         self.layer.cornerRadius = height / 2
@@ -51,7 +51,7 @@ final class CustomWheel: UIView {
         self.widthAnchor.constraint(equalToConstant: width).isActive = true
     }
     
-    private func setupWheelDisk() {
+    private func setUpWheelDisk() {
         wheelDisk.translatesAutoresizingMaskIntoConstraints = false
         wheelDisk.backgroundColor = Constant.Disk.color
         wheelDisk.layer.cornerRadius = Constant.Disk.cornerRadius

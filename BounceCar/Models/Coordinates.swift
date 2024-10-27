@@ -10,7 +10,7 @@ struct CarCoordinates {
     static var barIndent: [Double] = [30, 21, 3, 0, 0, 1, 2, 2, 5, 10, 16, 20, 30, 36, 35, 40, 45]
     static let barWidth: Double = 9
     static let barSpacing: Double = 8
-    static let barCount = 17
+    static let barCount = barHeights.count
 }
 
 struct WheelCoordinates {
