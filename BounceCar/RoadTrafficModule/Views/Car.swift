@@ -36,11 +36,11 @@ final class Car: UIView {
         }
     }
     
-    //MARK: - Variables
+    //MARK: - Private variables
     private var views: [UIView] = []
     private var wheels: [UIView] = []
     
-    // MARK: - Properties
+    // MARK: - Private fields
     private let width: Double
     private let height: Double
     private let type: MoveType
@@ -59,7 +59,7 @@ final class Car: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: Setup
+    // MARK: - Setup
     private func setUp() {
         setUpCar()
         setUpCarViews()

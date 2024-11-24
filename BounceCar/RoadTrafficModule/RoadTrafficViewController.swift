@@ -46,7 +46,7 @@ final class RoadTrafficViewController: UIViewController {
         setUpAnimations()
     }
     
-    //MARK: Setup
+    //MARK: - Setup
     private func setUp() {
         view.backgroundColor = .white
         setUpLeftRightCar()
